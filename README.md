@@ -11,7 +11,7 @@ http://codepen.io/unavezfui/full/Byryep/
 Usage
 ------
 
-	$('#my-element-to-watch').mflip();
+	$('#my-element').mflip();
 
 Dependencies
 ------------
