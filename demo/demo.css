@@ -1,0 +1,19 @@
+/**
+ * Demo
+ */
+.box {
+  cursor: pointer;
+}
+.box .front,
+.box .back {
+  padding: 1em 1.1em;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+}
+.box .front {
+  background: url("front.jpg");
+}
+.box .back {
+  background: url("back.jpg");
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>M Flip - jQuery Plugin - Demo</title>
+  <link rel="stylesheet" href="../source/jquery.m.flip.css" media="screen" type="text/css"/>
+  <link rel="stylesheet" href="demo.css" media="screen" type="text/css"/>
+</head>
+
+<body>
+
+<div class="box m-flip">
+  <div class="front"> Hello I'm the front</div>
+  <div class="back"> I'm the back, bye!</div>
+</div>
+
+<script src='../lib/jquery-1.10.2.min.js'></script>
+<script src='../source/jquery.m.flip.js'></script>
+<script>
+  $(document).ready(function() {
+    $(".box").mflip();
+  });
+</script>
+</body>
+</html>
