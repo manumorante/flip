@@ -10,21 +10,51 @@
  */
 (function($){
 
-  var selector = '.m-flip',
-    isTouch		 = document.createTouch !== undefined;
+  var isTouch   = document.createTouch !== undefined,
+    evt_hover = (isTouch)? 'touchstart' : 'mouseover',
+    evt_out   = (isTouch)? 'touchend'   : 'mouseout';
+
 
   $.fn.extend({
     mflip: function(){
       return this.each(function(){
-        $(this).html('<div class="m-flip__content">'+ $(this).html() +'</div>');
 
-        if(isTouch){
-          $(this).bind('touchstart', function(){
-            $(this).addClass('active');
-          }).bind('touchend', function(){
-            $(this).removeClass('active');
-          });
-        }
+        var $f = $(this),
+          $c,
+          rotation = $f.data('rotation');
+
+        $f.html('<div class="m-flip__content">'+ $f.html() +'</div>');
+        $c = $('.m-flip__content', $f);
+
+        // Event: Rollover / Touchstart
+        $f.bind(evt_hover, function(){
+
+          if( isNaN(rotation) ){
+            $c.addClass('active');
+
+          } else {
+            $c.css({
+              '-webkit-transform': 'rotateY('+ rotation +'deg)',
+              '-moz-transform': 'rotateY('+ rotation +'deg)',
+              'transform': 'rotateY('+ rotation +'deg)'
+            });
+          }
+
+          // Event: Rollout / Touchend
+        }).bind(evt_out, function(){
+
+          if( isNaN(rotation) ){
+            $c.removeClass('active');
+
+          }else{
+            $c.css({
+              '-webkit-transform': 'rotateY(0deg)',
+              '-moz-transform': 'rotateY(0deg)',
+              'transform': 'rotateY(0deg)'
+            });
+          }
+
+        });
       });
     }
   });

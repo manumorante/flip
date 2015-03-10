@@ -1,11 +1,9 @@
-/*!
- * M Flip - jQuery Plugin
- * version 0.1 (17 Feb 2015)
- * requires jQuery v1.6 or later
- *
- * Examples at http://codepen.io/unavezfui/pen/Byryep
- *
- * Copyright 2015 Manu Morante - www.manumorante.com
+/**
+ * M Flip SASS mixin
+ * <div class="box m-flip">
+ *   <div class="front"> Hi I'm the front </div>
+ *   <div class="back"> Hi I'm the back </div>
+ * </div>
  */
 .m-flip {
   -moz-perspective: 1000;

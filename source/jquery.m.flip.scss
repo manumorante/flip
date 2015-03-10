@@ -13,18 +13,18 @@ $m-flip-rotation: 180deg !default;
 
 .m-flip{
   @include perspective(1000);
-  
+
   &,
   .front, .back {
     @include box-sizing(border-box);
     width: $m-flip-width;
     height: $m-flip-height;
   }
-  
+
   .m-flip__content {
     @include transition(0.6s);
     @include transform-style(preserve-3d);
-    
+
     &.active,
     &:hover{ @include rotateY($m-flip-rotation); }
   }
@@ -34,25 +34,7 @@ $m-flip-rotation: 180deg !default;
     top: 0; left: 0;
     @include backface-visibility(hidden);
   }
-  
+
   .front { z-index: 2; }
   .back { @include rotateY(180deg); }
-}
-
-/**
- * Using example (decoration)
- */
-.box {
-  cursor: pointer;
-  
-  .front,
-  .back{
-    padding: 1em 1.1em;
-    
-    text-align: center;
-    font-size: 3em;
-    color: white;    
-  }
-  .front{ background: lorem-pixel-url(1) }
-  .back{ background: lorem-pixel-url(2) }
 }
