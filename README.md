@@ -6,7 +6,8 @@ A lightweight implementation of the 'flip' effect using CSS styles.
 Demo
 ----
 
-http://codepen.io/unavezfui/full/Byryep/
+Codepen: http://codepen.io/unavezfui/full/Byryep/
+Github: http://manumorante.github.io/flip/
 
 Usage
 ------
