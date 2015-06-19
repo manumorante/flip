@@ -8,7 +8,7 @@ Demo
 
 Codepen: http://codepen.io/unavezfui/full/Byryep/
 
-Github: http://manumorante.github.io/flip/
+Github: http://manumorante.github.io/jquery.flip/
 
 Usage
 ------
