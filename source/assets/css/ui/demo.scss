@@ -1,0 +1,19 @@
+/**
+ * Demo
+ */
+
+.box {
+  cursor: pointer;
+
+  .front, .back {
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .front { background-image: image-url('front.jpg') }
+  .back  { background-image: image-url('back.jpg') }
+}
+
+
