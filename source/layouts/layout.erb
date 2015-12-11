@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= partial 'layouts/head' %>
+</head>
+<body class="<%= page_classes %>">
+
+<%= yield %>
+
+<%= javascript_include_tag  'application' %>
+</body>
+</html>
