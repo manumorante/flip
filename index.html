@@ -10,7 +10,9 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
 <link href="assets/css/application.css" rel="stylesheet" />
+
 </head>
 <body class="index">
 
@@ -18,14 +20,29 @@
 
   <h1>MM Flip jQuery Plugin</h1>
 
-  <div class="box m-flip">
+  <div class="box" data-mflip="on">
     <div class="front"> Hello I'm the front</div>
     <div class="back"> I'm the back, bye!</div>
   </div>
 
-  <div class="box m-flip" data-rotation="45">
-    <div class="front"> Hello I'm the front</div>
-    <div class="back"> I'm the back, bye!</div>
+  <div class="box" data-mflip="on" data-rotation="45">
+    <div class="front">45 degrees of rotation</div>
+    <div class="back">I'm the back, bye!</div>
+  </div>
+
+  <div class="box" data-mflip="on" data-rotation="75">
+    <div class="front">75 degrees of rotation</div>
+    <div class="back">I'm the back, bye!</div>
+  </div>
+
+  <div class="box" data-mflip="on" data-rotation="90">
+    <div class="front">90 degrees of rotation</div>
+    <div class="back">I'm the back, bye!</div>
+  </div>
+
+  <div class="box" data-mflip="on" data-rotation="120">
+    <div class="front">120 degrees of rotation</div>
+    <div class="back">I'm the back, bye!</div>
   </div>
 
 </div>
