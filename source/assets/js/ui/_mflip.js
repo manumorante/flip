@@ -1,9 +1,9 @@
 /*!
- * M Flip - jQuery Plugin
+ * mflip - jQuery Plugin
  * version 0.1 (17 Feb 2015)
- * requires jQuery v1.6 or later
+ * requires jQuery v1.4+
  *
- * Examples at http://codepen.io/unavezfui/pen/Byryep
+ * https://github.com/manumorante/jquery.mflip
  *
  * Copyright 2015 Manu Morante - www.manumorante.com
  *
@@ -14,17 +14,17 @@
     evt_hover = (isTouch)? 'touchstart' : 'mouseover',
     evt_out   = (isTouch)? 'touchend'   : 'mouseout';
 
-
   $.fn.extend({
+
     mflip: function(){
       return this.each(function(){
 
-        var $f = $(this),
-          $c,
+        var $f = $(this), $c,
           rotation = $f.data('rotation');
 
-        $f.html('<div class="m-flip__content">'+ $f.html() +'</div>');
-        $c = $('.m-flip__content', $f);
+        $f.addClass('mflip');
+        $f.html('<div class="mflip__content">'+ $f.html() +'</div>');
+        $c = $('.mflip__content', $f);
 
         // Event: Rollover / Touchstart
         $f.bind(evt_hover, function(){
@@ -40,7 +40,7 @@
             });
           }
 
-          // Event: Rollout / Touchend
+        // Event: Rollout / Touchend
         }).bind(evt_out, function(){
 
           if( isNaN(rotation) ){
@@ -60,3 +60,5 @@
   });
 
 })(jQuery);
+
+$("[data-mflip='on']").mflip();
